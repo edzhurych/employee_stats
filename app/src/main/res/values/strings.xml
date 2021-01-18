@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Employees Stats</string>
+
+    <string name="year">%d год</string>
+    <string name="years">%d года</string>
+    <string name="let">%d лет</string>
+
+    <string name="employee_name">%s %s</string>
+    <string name="error_message">Произошла ошибка</string>
+</resources>

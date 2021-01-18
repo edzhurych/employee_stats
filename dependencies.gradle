@@ -1,0 +1,80 @@
+ext {
+
+    def kotlin = '1.4.21'
+    def ktx = '1.3.2'
+    def appcompat = '1.2.0'
+    def material = '1.2.1'
+    def constraintlayout = '2.0.4'
+    def junit = '4.13.1'
+    def lifecycle = '2.2.0'
+    def navigation = "2.3.2"
+    def gson = "2.8.6"
+    def okhttp = '4.9.0'
+    def retrofit = "2.9.0"
+    def koin_version = "2.2.2"
+    def coroutines = '1.4.2'
+    def room = '2.2.6'
+
+    kotlinDependencies = [
+            "org.jetbrains.kotlin:kotlin-stdlib:$kotlin",
+            "androidx.core:core-ktx:$ktx",
+            "org.jetbrains.kotlinx:kotlinx-coroutines-android:${coroutines}",
+    ]
+
+    coreAndroidDependencies = [
+            "androidx.appcompat:appcompat:$appcompat",
+            "com.google.android.material:material:$material",
+            "androidx.constraintlayout:constraintlayout:$constraintlayout"
+    ]
+
+    testDependencies = [
+            "junit:junit:$junit"
+    ]
+
+    androidTestDependencies = [
+            "androidx.test.ext:junit:1.1.2",
+            "androidx.test.espresso:espresso-core:3.3.0"
+    ]
+
+    diDependencies = [
+            "org.koin:koin-core:$koin_version",
+            "org.koin:koin-android:$koin_version",
+            "org.koin:koin-android-scope:$koin_version",
+            "org.koin:koin-android-viewmodel:$koin_version",
+    ]
+
+    lifecycleDependencies = [
+            "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle",
+            "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle",
+            "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle"
+    ]
+
+    lifecyclePlugins = [
+            "androidx.lifecycle:lifecycle-compiler:${lifecycle}"
+    ]
+
+    navigationDependencies = [
+            "androidx.navigation:navigation-fragment-ktx:${navigation}",
+            "androidx.navigation:navigation-ui-ktx:${navigation}"
+    ]
+
+    parsingDependencies = [
+            "com.google.code.gson:gson:$gson",
+    ]
+
+    networkDependencies = [
+            "com.squareup.retrofit2:retrofit:${retrofit}",
+            "com.squareup.retrofit2:converter-gson:${retrofit}",
+            "com.squareup.okhttp3:logging-interceptor:${okhttp}",
+            "com.squareup.okhttp3:okhttp:${okhttp}"
+    ]
+
+    databaseDependencies = [
+            "androidx.room:room-ktx:${room}",
+            "androidx.room:room-runtime:${room}"
+    ]
+
+    databasePlugins = [
+            "androidx.room:room-compiler:${room}"
+    ]
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/specialtyFragment">
+
+    <fragment
+        android:id="@+id/specialtyFragment"
+        android:name="com.example.employeestats.ui.SpecialtyFragment"
+        android:label="SpecialtyFragment">
+        <action
+            android:id="@+id/action_specialtyFragment_to_employeesFragment"
+            app:destination="@id/employeesFragment">
+            <argument
+                android:name="specialtyId"
+                app:argType="integer" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/employeesFragment"
+        android:name="com.example.employeestats.ui.EmployeesFragment"
+        android:label="EmployeesFragment">
+        <argument
+            android:name="specialtyId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_employeesFragment_to_employDetailsFragment"
+            app:destination="@id/employDetailsFragment">
+<!--            <argument-->
+<!--                android:name="employeeId"-->
+<!--                app:argType="integer" />-->
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/employDetailsFragment"
+        android:name="com.example.employeestats.ui.ProfileFragment"
+        android:label="EmployDetailsFragment">
+        <argument
+            android:name="employeeId"
+            app:argType="integer" />
+    </fragment>
+</navigation>
